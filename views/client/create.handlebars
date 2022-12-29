@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-body">
+        <h1>Criar um artigo</h1>
+        <form action="/service/create" method="post">
+            <input type="text" name="title" id="title" placeholder="Titulo" class="form-control my-3">
+            <input type="text" name="slug" id="slug" placeholder="Slug" class="form-control mt-3">
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="Conteudo" class="form-control mt-3"></textarea>
+            <input type="text" name="author" id="author" placeholder="Autor" class="form-control mt-3">
+            <button type="submit" class="btn btn-success mt-3">
+                Salvar artigo
+            </button><br>
+            <a href="/">Retornar ao início</a>
+        </form>
+    </div>
+</div>

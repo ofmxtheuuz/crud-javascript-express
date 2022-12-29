@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+        <h1>Editar o artigo: {{artigo._id}}</h1>
+        <form action="/service/edit" method="post">
+            <input type="text" name="title" id="title" placeholder="Titulo" class="form-control my-3" value="{{artigo.title}}">
+            <input type="text" name="slug" id="slug" placeholder="Slug" class="form-control mt-3" value="{{artigo.slug}}">
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="Conteudo" class="form-control mt-3">{{artigo.content}}</textarea>
+            <input type="text" name="author" id="author" placeholder="Autor" class="form-control mt-3" value="{{artigo.author}}">
+            <input type="hidden" name="_id" id="_id" value="{{artigo._id}}">
+            <button type="submit" class="btn btn-success mt-3">
+                Salvar artigo
+            </button>
+        </form><br>
+        <a href="/">Retornar ao início</a>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<h1>
+    Todos os artigos
+</h1>
+<h3>
+    Foram encontrados {{artigos.length}} itens
+</h3>
+<a href="/create">
+    Criar um artigo
+</a>
+{{#each artigos}}
+    <div class="card mt-3">
+        <div class="card-body">
+            <h3>
+                {{title}}
+            </h3>
+            <p>{{author}}</p>
+            <a href="/article/{{slug}}">
+                <button class="btn btn-success">
+                    Leia mais
+                </button>
+            </a>
+            <form action="/delete/{{_id}}" method="post">
+                <button class="btn btn-danger mt-1">
+                    Excluir
+                </button>
+            </form>
+            <a href="/edit/{{_id}}">
+                <button class="btn btn-primary mt-1">
+                    Editar
+                </button>
+            </a>
+            <hr>
+            <small>Data de publicação: {{created}}</small>
+        </div>
+    </div>
+{{else}}
+    <h1>
+        Nenhum artigo foi encontrado
+    </h1>
+{{/each}}
